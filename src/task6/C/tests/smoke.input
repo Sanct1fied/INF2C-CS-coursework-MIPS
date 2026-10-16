@@ -1,0 +1,3 @@
+int/* comment */ value = 1;
+// remove this line
+int other = 2;

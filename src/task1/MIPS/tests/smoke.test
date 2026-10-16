@@ -1,0 +1,5 @@
+# RUN: make -s -B -C "%S/.." run-eval TEST="'%S/smoke.input'" | filecheck "%s" --strict-whitespace
+
+# CHECK: {{\A}}The quick brown fox{{$}}
+# CHECK-NEXT: {{^}}jumps over the lazy dog.{{$}}
+# CHECK-NEXT: {{^}}1234567890 !@#$%^&*(){{\n*\Z}}

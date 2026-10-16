@@ -1,0 +1,7 @@
+// this function multiplies the input by 2.
+int test(int a)
+{
+	int c = a + a;
+	/* return the result */
+	return c;
+}

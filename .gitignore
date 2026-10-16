@@ -1,0 +1,6 @@
+*.o
+src/*/C/main
+src/*/C/eval
+src/*/*/output.txt
+__pycache__/
+.lit/

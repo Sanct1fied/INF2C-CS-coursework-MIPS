@@ -1,0 +1,3 @@
+# RUN: printf '%%s\n' hello hello | make -s -B -C "%S/.." run-eval TEST= | filecheck "%s" --strict-whitespace
+
+# CHECK: {{\A}}0{{\n*\Z}}

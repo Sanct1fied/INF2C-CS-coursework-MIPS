@@ -1,0 +1,4 @@
+int twice(int a) {
+    int result = a * 2;
+    return result;
+}

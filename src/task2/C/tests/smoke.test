@@ -1,0 +1,9 @@
+# RUN: printf '%%s\n' 7 | make -s -B -C "%S/.." run-eval TEST= | filecheck "%s" --strict-whitespace
+
+# CHECK: {{\A}}*{{$}}
+# CHECK-NEXT: {{^}}* *{{$}}
+# CHECK-NEXT: {{^}}* * *{{$}}
+# CHECK-NEXT: {{^}}* * * *{{$}}
+# CHECK-NEXT: {{^}}* * * * *{{$}}
+# CHECK-NEXT: {{^}}* * * * * *{{$}}
+# CHECK-NEXT: {{^}}* * * * * * *{{\n*\Z}}

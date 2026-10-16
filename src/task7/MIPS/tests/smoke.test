@@ -1,0 +1,7 @@
+# RUN: rm -f "%t.output"
+# RUN: make -s -B -C "%S/.." run-eval TEST="'%S/smoke.input' '%t.output'" | filecheck "%s" --check-prefix=STDOUT --allow-empty
+# RUN: filecheck "%s" --strict-whitespace --input-file="%t.output"
+
+# STDOUT: {{\A\n?\Z}}
+
+# CHECK: {{\A}}abc{{\n*\Z}}
