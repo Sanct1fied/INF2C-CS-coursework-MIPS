@@ -3,6 +3,9 @@
 void task3(int rows) {
 	// Your code here to implement the functionality for task3
 	// Empty diamond pattern given number of rows
+	if (rows < 0){
+		return;
+	}
 	int i, j;
 	for (i = 0; i < 2 * rows - 1; i++){
 		int k;

@@ -19,7 +19,7 @@ row_loop:
 
     li $s2, 0    # j = 0
 col_loop:
-    slt $t0, $s1, $s2     # if j less than i -> $t1 = 0
+    slt $t0, $s1, $s2     # if i less than j  -> $t0 = 0
     bnez $t0, row_end    # if $t0 != 0 -> row_end
     nop
 
