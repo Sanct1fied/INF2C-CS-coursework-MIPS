@@ -3,4 +3,39 @@
 void task3(int rows) {
 	// Your code here to implement the functionality for task3
 	// Empty diamond pattern given number of rows
+	int i, j;
+	for (i = 0; i < 2 * rows - 1; i++){
+		int k;
+		if (i < rows){
+			k = i;
+		} else {
+			k = 2*rows-2-i;
+		}
+		int left = rows - k;
+		int right = rows +k ;
+
+		for (j = 0; j <= right; j++){
+			if (j == left){
+				printChar('*');
+			} else if (j == right){
+				printChar(' ');
+				printChar('*');
+			} else {
+				printChar(' ');
+				printChar(' ');
+			}
+		}
+		printLn();
+	}
 }
+
+/*
+
+      *
+    *   *
+  *       *
+*           *
+  *       *
+    *   *
+      *
+*/
