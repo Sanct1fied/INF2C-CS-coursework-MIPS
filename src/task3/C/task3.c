@@ -20,11 +20,10 @@ void task3(int rows) {
 		for (j = 0; j <= right; j++){
 			if (j == left){
 				printChar('*');
+				
 			} else if (j == right){
-				printChar(' ');
 				printChar('*');
-			} else {
-				printChar(' ');
+			} else {	
 				printChar(' ');
 			}
 		}
