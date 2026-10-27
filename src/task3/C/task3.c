@@ -14,8 +14,8 @@ void task3(int rows) {
 		} else {
 			k = 2*rows-2-i;
 		}
-		int left = rows - k;
-		int right = rows +k ;
+		int left = rows - k+1;
+		int right = rows +k +1;
 
 		for (j = 0; j <= right; j++){
 			if (j == left){
