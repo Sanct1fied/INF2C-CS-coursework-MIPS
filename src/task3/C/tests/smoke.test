@@ -1,6 +1,6 @@
 # RUN: printf '%%s\n' 4 | make -s -B -C "%S/.." run-eval TEST= | filecheck "%s" --strict-whitespace
 
-# CHECK: {{\A}}      *{{$}}
+# CHECK:     {{\A}}      *{{$}}
 # CHECK-NEXT: {{^}}    *   *{{$}}
 # CHECK-NEXT: {{^}}  *       *{{$}}
 # CHECK-NEXT: {{^}}*           *{{$}}

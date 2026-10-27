@@ -44,6 +44,8 @@ k_done:
     move $s5, $s0     #initialise right = rows
     sub $s4, $s4, $s3   # left - k
     add $s5, $s5, $s3   # right + k
+    sub $s4, $s4, 1
+    sub $s5, $s5, 1
 
     li $s2, 0 #j=0
 
