@@ -54,17 +54,42 @@ inner_loop:
     bnez $t2, inner_done
     nop
 
-    li $a0, 32                   #default case is a space
-    beq $s2, $s4, star
+    beq $s2, $s4, single_star
     nop
 
-    bne $s2, $s5, print
+    beq $s2, $s5, space_star
     nop
 
-star:
+    j double_space
+    nop
+
+space_star:
+    li $a0, 32
+    jal printChar
+    nop
+
     li $a0, 42      #print star
+    jal printChar
+    nop
 
-print:
+    addi $s2, $s2, 1
+    j inner_loop
+    nop
+
+single_star:
+    li $a0, 42
+    jal printChar
+    nop
+
+    addi $s2, $s2, 1
+    j inner_loop
+    nop
+
+double_space:
+    li $a0, 32
+    jal printChar
+    nop
+    li $a0, 32
     jal printChar
     nop
     addi $s2, $s2, 1
