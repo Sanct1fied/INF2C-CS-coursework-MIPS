@@ -1,8 +1,8 @@
 #include "task5.h"
 #include <stdio.h>
 
-int mystrlen(const char *s){
-    const char *p = s;
+int mystrlen(const char *s){ //we went through this in lecture so i hope its ok i use it
+    const char *p = s;       //it makes this task considerably easier
     while(*p++ != '\0');
     return p - s - 1;
 }
@@ -12,19 +12,16 @@ int task5(const char *str1, const char *str2) {
 	int lenstr2 = mystrlen(str2);
 	int matches = 0;
 	int i,j;
-	if (lenstr1 == 0 || lenstr2 > lenstr1){return 0;}
-	for (i = 0; i < lenstr1 ;){//iterate through the bigger string
-		//i++ ; //but iterate after the loop starts
+	if (lenstr1 == 0 || lenstr2 > lenstr1){return 0;} //if main string is "" or if the substring is bigger also return 0
+	for (i = 0; i <= lenstr1 - lenstr2 ;i++){//iterate through the bigger string
 		for (j =0; j < lenstr2 ;j++){ //iterate through the smaller string
-			if (str2[j] == str1[i]){ //if the characters match, we continue matching
-				i++;
-				matches++;
-			} else { //if they don't we start the smaller string again
+			if (str2[j] != str1[i+j]){ //if the characters don't match, we move to the next i
 				break;
-			} //if we make it through the full smaller string then we have found a match
+			} 
+		}
+		if (j == lenstr2){ //if we make it through the full smaller string then we have found a match
+			matches++;
 		}
 	}
-	return matches/lenstr2;
-
-	return -1;
+	return matches;
 }
