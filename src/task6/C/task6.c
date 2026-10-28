@@ -5,7 +5,7 @@ int task6(const char *input, char *output) {
 	while (input[i] != '\0'){
 		int j;
 		if (input[i] == '/' && input[i+1] == '/'){ //check when there is a comment
-			for (j = 0; ;j++){ //find where the next newline is
+			for (j = i; ;j++){ //find where the next newline is
 				if (input[j] == '\n'){
 					i = j;
 					break;
@@ -14,7 +14,7 @@ int task6(const char *input, char *output) {
 		}
 		if (input[i] == '/' && input[i+1] == '*'){
 			int brackets = 0; 									//this is to count the number of open brackets
-			for (j = 0; ;j++){ 									//find where the next */ is
+			for (j = i; ;j++){ 									//find where the next */ is
 				if (input[j] == '*' && input[j+1] == '/'){
 					brackets--; 								//if we find close brackets we minus 1
 					if (brackets == 0) { 		//when all the open brackets are closed we break the loop and move the pointer along.
