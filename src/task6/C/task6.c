@@ -27,7 +27,7 @@ int task6(const char *input, char *output) {
 				}
 			}
 		}
-		printf("%c",input[i]);
+		output[i] = input[i];
 		i++;
 	}
 	return -1;
