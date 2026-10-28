@@ -1,5 +1,4 @@
 #include "task5.h"
-#include <stdio.h>
 
 int mystrlen(const char *s){ //we went through this in lecture so i hope its ok i use it
     const char *p = s;       //it makes this task considerably easier
